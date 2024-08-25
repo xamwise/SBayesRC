@@ -93,7 +93,8 @@ LDstep1 <- function(mafile, genoPrefix, outDir, genoCHR="", blockRef="", tool="g
     }
 
     bA1A1 = (bims_val$V5 == ma_val$A1) & (bims_val$V6 == ma_val$A2)
-    bA1A2 = (bims_val$V6 == ma_val$A2) & (bims_val$V5 == ma_val$A1)
+    # Thanks Dougspeed for the correction
+    bA1A2 = (bims_val$V5 == ma_val$A2) & (bims_val$V6 == ma_val$A1)
 
     bAll = bA1A1 | bA1A2
     
