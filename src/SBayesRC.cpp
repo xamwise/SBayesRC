@@ -154,7 +154,7 @@ void SBayesRC::setOutBeta(bool bOut){
             Rcout << "Error: can't open [" << outPrefix << ".beta.bin] for writing" << std::endl;
             throw("ERROR");
         }
-        uint32_t size[2] = {static_cast<uint32_t>(thinIter), static_cast<uint32_t>(m)};
+        uint32_t size[2] = {thinIter, m};
         fwrite(size, sizeof(uint32_t), 2, fpBeta);
 
         head_byte = 2 * index_size;
